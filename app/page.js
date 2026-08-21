@@ -74,7 +74,18 @@ export default async function HomePage() {
           <h2>About Me</h2>
           <div className="about-grid">
             <div className="about-photo">
-              <img src="/Hirtik.png" alt="Hirtik Kumar" />
+              <div className="about-photo-stage">
+                <i className="fa-brands fa-html5 float-icon fi-html"></i>
+                <i className="fa-brands fa-css3-alt float-icon fi-css"></i>
+                <i className="fa-brands fa-js float-icon fi-js"></i>
+                <i className="fa-brands fa-git-alt float-icon fi-git"></i>
+                <i className="fa-brands fa-node float-icon fi-node"></i>
+                <img src="/hirtik-about.png" alt="Hirtik Kumar" className="about-cutout" />
+                <div className="about-badge">
+                  <p className="about-badge-title">Freelancer &amp; Student</p>
+                  <p className="about-badge-sub">BS Computer Science · 3+ yrs learning</p>
+                </div>
+              </div>
             </div>
             <div className="about-text">
               <p>
@@ -167,6 +178,7 @@ export default async function HomePage() {
                   <div className="skill-card"><div className="skill-card-top"><i className="fa-brands fa-figma"></i><span>Figma</span></div><div className="skill-meter"><div className="skill-meter-fill" style={{width:"65%"}}></div></div></div>
                   <div className="skill-card"><div className="skill-card-top"><i className="fa-solid fa-palette"></i><span>Canva</span></div><div className="skill-meter"><div className="skill-meter-fill" style={{width:"70%"}}></div></div></div>
                   <div className="skill-card"><div className="skill-card-top"><i className="fa-solid fa-cloud-arrow-up"></i><span>Deployment</span></div><div className="skill-meter"><div className="skill-meter-fill" style={{width:"75%"}}></div></div></div>
+                  <div className="skill-card"><div className="skill-card-top"><i className="fa-solid fa-magnifying-glass-chart"></i><span>SEO</span></div><div className="skill-meter"><div className="skill-meter-fill" style={{width:"70%"}}></div></div></div>
                 </div>
               </div>
               <div className="skill-group">

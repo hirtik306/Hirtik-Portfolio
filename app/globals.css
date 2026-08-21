@@ -416,7 +416,7 @@ nav{
 
 .about-grid{
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 56px;
   align-items: start;
 }
@@ -439,6 +439,78 @@ nav{
   inset: 0;
   box-shadow: inset 0 0 0 1px rgba(94,234,212,0.08);
   pointer-events: none;
+}
+
+.about-photo-stage{
+  position: relative;
+  padding: 34px 22px 74px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.about-cutout{
+  position: relative;
+  z-index: 2;
+  width: 78%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.55));
+}
+
+.float-icon{
+  position: absolute;
+  z-index: 1;
+  font-size: 34px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  animation: iconFloat 4.5s ease-in-out infinite;
+}
+.fi-html{ top: 10%; left: 6%; color: #f16529; box-shadow: 0 0 26px rgba(241,101,41,0.35); animation-delay: 0s; }
+.fi-css{ top: 8%; right: 8%; color: #2965f1; box-shadow: 0 0 26px rgba(41,101,241,0.35); animation-delay: 0.6s; }
+.fi-js{ top: 42%; left: 0%; color: #f0db4f; box-shadow: 0 0 26px rgba(240,219,79,0.3); animation-delay: 1.2s; }
+.fi-git{ top: 40%; right: 2%; color: #f34f29; box-shadow: 0 0 26px rgba(243,79,41,0.35); animation-delay: 1.8s; }
+.fi-node{ bottom: 22%; left: 4%; color: #83cd29; box-shadow: 0 0 26px rgba(131,205,41,0.35); animation-delay: 2.4s; }
+
+@keyframes iconFloat{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-10px); }
+}
+
+.about-badge{
+  position: absolute;
+  z-index: 2;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 36px);
+  background: rgba(10,14,20,0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: left;
+}
+.about-badge-title{
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.about-badge-sub{
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 720px){
+  .float-icon{ font-size: 22px; padding: 8px; }
 }
 
 .about-text p{
